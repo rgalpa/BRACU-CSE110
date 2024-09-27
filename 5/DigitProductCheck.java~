@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class DigitProductCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input range
+        System.out.print("Enter the starting number: ");
+        int start = scanner.nextInt();
+        System.out.print("Enter the ending number: ");
+        int end = scanner.nextInt();
+
+        // Input divisor
+        System.out.print("Checking number: ");
+        int divisor = scanner.nextInt();
+
+        for (int i = start; i <= end; i++) {
+            int number = i;
+            int product = 1;
+            while (number != 0) {
+                int digit = number % 10;
+                product *= digit;
+                number /= 10;
+            }
+            if (product % divisor == 0) {
+                System.out.println("Product of " + i + ": " + product);
+            }
+        }
+
+        scanner.close();
+    }
+}
