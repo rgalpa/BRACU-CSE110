@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class HW3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the height of the rectangle: ");
+        int height = scanner.nextInt();
+
+        System.out.print("Enter the width of the rectangle: ");
+        int width = scanner.nextInt();
+
+        // Loop through each row
+        for (int i = 0; i < height; i++) {
+            // Loop through each column
+            for (int j = 0; j < width; j++) {
+                // If it's the first or last row, or first or last column, print '*'
+                // Otherwise, if it's the first or last column, or first or last row, print '*'
+                // Otherwise, print space
+                if (i == 0 || i == height - 1 || j == 0 || j == width - 1 || i == height / 2 || j == width / 2) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // Move to the next line after each row is printed
+            System.out.println();
+        }
+    }
+}
