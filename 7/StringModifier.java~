@@ -1,0 +1,15 @@
+public class StringModifier {
+    public static void modifyStrings(String S, String S1, String S2) {
+        // Replace all occurrences of S1 with S2 in S
+        String modifiedString = S.replaceAll(S1, S2);
+        // Print the modified string
+        System.out.println("Modified String: " + modifiedString);
+    }
+
+    public static void main(String[] args) {
+        String S = "This is a test string. Test.";
+        String S1 = "test";
+        String S2 = "sample";
+        modifyStrings(S, S1, S2);
+    }
+}

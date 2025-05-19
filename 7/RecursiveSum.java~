@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class RecursiveSum {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number (N): ");
+        int n = scanner.nextInt();
+        scanner.close();
+
+        int sum = calculateSum(n);
+        System.out.println("Sum of numbers from 1 to " + n + " is: " + sum);
+    }
+
+    public static int calculateSum(int n) {
+        if (n == 1) {
+            return 1;
+        } else {
+            return n + calculateSum(n - 1);
+        }
+    }
+}

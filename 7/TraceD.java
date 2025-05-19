@@ -1,0 +1,27 @@
+class TraceD{
+  public static void main(String args[]){
+     String [] s = {"AaC","eEF","iHI","uOL"};
+     int count = vowel(s);
+     System.out.println(count);
+
+  }
+  
+  
+  public static int vowel(String [] s){
+    int count =0;
+    for(int i = 0;i<s.length; i++){
+       String a = s[i];
+       
+       for(int j = 0;j<a.length(); j++){
+       char b = a.charAt(j);
+       //System.out.println(b);
+       if(b=='A' || b=='E' || b=='I' || b=='O' || b=='U' ||b=='a' || b=='e' || b=='i' || b=='o' || b=='u'){
+         count++;
+         }
+       }
+     }
+    return count;
+    
+  }
+}
+
