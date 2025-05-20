@@ -1,0 +1,24 @@
+public class task2{
+  public static void main(String[]args){
+//By Creating a third variable.
+    int a = 5;
+    int b = 10;
+    int temp;
+    
+     temp = a;
+     a = b;
+     b = temp;
+     System.out.println(a);
+     System.out.println(b);
+    
+//Without creating any other variables.
+    int x = 5;
+    int y = 10;
+    x=x+y;
+    y=x-y;
+    x=x-y;
+    
+    System.out.println(x);
+    System.out.println(y);
+  }
+}

@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class hw2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+        
+        // Input the elements of the array
+        int[] array = new int[size];
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+        
+        // Create a set to store unique elements
+        Set<Integer> uniqueElements = new HashSet<>();
+        
+        // Iterate through the array and add unique elements to the set
+        for (int num : array) {
+            uniqueElements.add(num);
+        }
+        
+        // Convert the set back to an array
+        int[] uniqueArray = new int[uniqueElements.size()];
+        int index = 0;
+        for (int num : uniqueElements) {
+            uniqueArray[index++] = num;
+        }
+        
+        // Print the array with unique elements
+        System.out.println("Array with unique elements:");
+        for (int num : uniqueArray) {
+            System.out.print(num + " ");
+        }
+        
+        scanner.close();
+    }
+}

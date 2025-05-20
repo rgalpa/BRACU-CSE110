@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class HW6{
+    public static void main (String [] args){
+        int temp=0;
+        String tempnam="";
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Number of students: ");
+        int length= sc.nextInt();
+        int [] number= new int[length];
+        String [] names= new String[length];    
+        for(int i=0; i<=length-1; i++){
+            System.out.println("Name of the student: ");
+            names[i]= sc.next();
+            System.out.println("His/Her marks: ");
+            number[i]= sc.nextInt();
+        }
+        System.out.println();  
+        for(int i=0; i<=length-1; i++){
+            for(int j=i+1; j<=length-1;j++){
+                if(number[j]<number[i]){
+                    temp=number[i];
+                    tempnam=names[i];
+                    number[i]=number[j];
+                    names[i]=names[j];
+                    number[j]=temp;
+                    names[j]=tempnam;
+                }
+            }
+        }
+        System.out.println("Sorted Array: ");
+        for(int i=0; i<=length-1; i++){
+            System.out.print(number[i]+" ");  
+        }
+        System.out.println();
+        for(int i=0; i<=length-1; i++){
+            System.out.print(names[i]+" ");    
+        }
+        System.out.println();   
+    }
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class hw1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Take input for the size of the array
+        System.out.print("Enter the number of integers: ");
+        int N = scanner.nextInt();
+        
+        // Create an array of length N
+        int[] array = new int[N];
+        
+        // Take input for the elements of the array
+        System.out.println("Enter " + N + " integers:");
+        for (int i = 0; i < N; i++) {
+            array[i] = scanner.nextInt();
+        }
+        
+        // Print the elements of the array with their indices
+        System.out.println("Array elements with their indices:");
+        for (int i = 0; i < N; i++) {
+            System.out.println("Index " + i + ": " + array[i]);
+        }
+        
+        // Take input for the new integer value to add
+        System.out.print("Enter an integer to add to the array: ");
+        int newValue = scanner.nextInt();
+        
+        // Resize the array by length 1 and add the new integer value
+        int[] resizedArray = new int[N + 1];
+        for (int i = 0; i < N; i++) {
+            resizedArray[i] = array[i];
+        }
+        resizedArray[N] = newValue;
+        
+        // Print the resized array
+        System.out.println("Resized array:");
+        for (int i = 0; i < resizedArray.length; i++) {
+            System.out.println("Index " + i + ": " + resizedArray[i]);
+        }
+        
+        scanner.close();
+    }
+}
